@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="card" style="background-color: whitesmoke;">
+        <div class="card-body">
+            <div class="row g-2">
+                <div class="col-4 col-md-3 col-xl-2">
+                    <img src="assets/foto.jpg" class="img-fluid rounded" alt="...">
+                </div>
+                <div class="col-8 col-md-9 col-xl-10">
+                    <div class="row g-2">
+                        <div class="col-12 bg-secondary text-white px-2">
+                            <span><i class="bi bi-person-circle"></i> Diego Davel Bonfim</span>
+                        </div>
+                        <div class="col-12">
+                            <span><i class="bi bi-briefcase"></i> Engenheiro de software | Desenvolvedor</span>
+                        </div>
+                        <div class="col-12 bg-secondary text-white px-2">
+                            <span><i class="bi bi-info-circle"></i> Informações</span>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-4">
+                            <span><i class="bi bi-geo-alt"></i> Vila Velha - ES, Brasil</span>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-4">
+                            <span><i class="bi bi-telephone"></i> +55 (27) 99507-6775</span>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-4">
+                            <span><i class="bi bi-envelope"></i> diegodavel@gmail.com</span>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-4">
+                            <span><i class="bi bi-linkedin"></i> linkedin.com/in/diegossauro</span>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-4">
+                            <span><i class="bi bi-calendar"></i> Maio de 1988 (35 anos)</span>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-4">
+                            <span><i class="bi bi-heart"></i> Casamento informal (2 filhos)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul ngbNav [activeId]="router.url.substring(1)" class="nav-tabs mt-2">
+        <li [ngbNavItem]="item.endereco" *ngFor="let item of menu">
+            <a ngbNavLink [routerLink]="item.endereco">{{item.texto}}</a>
+        </li>
+    </ul>
+    <div class="py-3">
+        <router-outlet></router-outlet>
+    </div>
+</div>
